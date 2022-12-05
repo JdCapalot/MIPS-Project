@@ -87,3 +87,9 @@ sw $ra,0($sp)
 sub $a0,$a0,2   #n-2
 jal fib     #fib(n-2)
 add $a0,$a0,2
+
+lw $ra,0($sp)   #restoring return address from stack
+add $sp,$sp,4
+
+lw $s7,0($sp)   #Pop return value from stack
+add $sp,$sp,4
