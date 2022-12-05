@@ -79,3 +79,11 @@ add $sp,$sp,4
 
 sub $sp,$sp,4   #Push return value to stack
 sw $v0,0($sp)
+
+#Calling fib(n-2)
+sub $sp,$sp,4   #storing return address on stack
+sw $ra,0($sp)
+
+sub $a0,$a0,2   #n-2
+jal fib     #fib(n-2)
+add $a0,$a0,2
