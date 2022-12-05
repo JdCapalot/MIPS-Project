@@ -103,3 +103,9 @@ jr $ra
 one:
 li $v0,1
 jr $ra
+
+.data
+prompt: .asciiz "This program calculates Fibonacci sequence with recursive functions.\nEnter a non-negative number: "
+result: .asciiz "F_"
+result2: .asciiz " = "
+endl: .asciiz "\n"
