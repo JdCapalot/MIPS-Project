@@ -57,3 +57,6 @@ syscall
 la $a0,endl #Print '\n'
 li $v0,4
 syscall
+
+li $v0,10
+syscall
