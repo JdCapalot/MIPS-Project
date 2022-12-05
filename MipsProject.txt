@@ -53,3 +53,7 @@ syscall
 move $a0,$t3    #Print the answer
 li $v0,1
 syscall
+
+la $a0,endl #Print '\n'
+li $v0,4
+syscall
