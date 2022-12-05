@@ -49,3 +49,7 @@ syscall
 la $a0,result2  #Print =
 li $v0,4
 syscall
+
+move $a0,$t3    #Print the answer
+li $v0,1
+syscall
