@@ -36,3 +36,8 @@ move $a0,$t2
 move $v0,$t2
 jal fib     #call fib (n)
 move $t3,$v0    #result is in $t3
+
+# Output message and n
+la $a0,result   #Print F_
+li $v0,4
+syscall
