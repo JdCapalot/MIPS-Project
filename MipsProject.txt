@@ -8,6 +8,7 @@ la $a0, prompt
 syscall
 li $v0, 5
 syscall
+
 move $t0, $v0
 bge $t0, 25, legal
 j illegal
@@ -15,13 +16,23 @@ legal:
 li $v0, 1
 move $a0, $t0
 syscall
+
 j exit
 illegal:
 li $v0, 4
 la $a0, error
 syscall
+
 j main
 exit:
 li $v0, 10
 syscall
 .end main
+
+move $t2,$v0    # n to $t2
+
+# Call function to get fibonnacci #n
+move $a0,$t2
+move $v0,$t2
+jal fib     #call fib (n)
+move $t3,$v0    #result is in $t3
