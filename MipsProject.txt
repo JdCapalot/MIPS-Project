@@ -60,3 +60,8 @@ syscall
 
 li $v0,10
 syscall
+
+fib:
+# Compute and return fibonacci number
+beqz $a0,zero   #if n=0 return 0
+beq $a0,1,one   #if n=1 return 1
